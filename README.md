@@ -1,49 +1,34 @@
 # PaleoMagKit
-Python tools and interactive Jupyter notebooks for reproducible paleomagnetic and rock-magnetic data analysis
-# PaleoMagKit
 
 Python tools and interactive Jupyter notebooks for paleomagnetic and rock-magnetic data processing and analysis.
 
 ## Notebooks
 
-**01 — ANU VSM Screening and DCD Export**
+| Notebook | Description |
+| --- | --- |
+| [01 — ANU VSM Screening and DCD Export](notebooks/01_ANU_VSM_Screening_DCD_Export_v01.ipynb) | Preliminary hysteresis and backfield analysis, Day plots and backfield conversion for DCD unmixing. |
+| [02 — DCD Egli Unmixing](notebooks/02_DCD_Egli_Unmixing_Interactive_v01.ipynb) | Direct DCD fitting with Egli SGG components, component comparison, bootstrap uncertainty and exports. |
 
-Processes hysteresis and backfield measurements from the ANU vibrating sample magnetometer. Provides preliminary hysteresis parameters, Day plots, backfield coercivity estimates and conversion of backfield measurements for DCD analysis.
+Each notebook contains its own usage instructions, scientific conventions, limitations and references. More tools will be added as they are reviewed and tested.
 
-The paramagnetic correction is intended for preliminary screening, not detailed magnetic characterization.
+## Getting started
 
-**02 — DCD Egli Unmixing**
+Open the notebooks in JupyterLab or VS Code with a Jupyter-compatible Python environment. Install the common dependencies with:
 
-Fits coercivity components directly to DCD curves using skewed generalized Gaussian (SGG) distributions. Supports multiple components, asymmetric distributions, parameter constraints, bootstrap confidence intervals and graphical exports.
+```bash
+python -m pip install numpy pandas scipy matplotlib ipywidgets openpyxl
+```
 
-## Installation
+Optional packages: `ipyfilechooser` for directory selection and `xlrd` for legacy Excel files. Notebook-specific requirements are listed in their introductions.
 
-The notebooks require Python, Jupyter and the following packages:
-
-`numpy`, `pandas`, `scipy`, `matplotlib`, `ipywidgets`, `openpyxl`
-
-Optional: `ipyfilechooser` for folder selection and `xlrd` for legacy Excel files.
-
-## Example data
-
-The `examples/vsm/` folder contains hysteresis and backfield measurements of specimen TA04-05, together with a converted DCD curve.
-
-These measurements are provided for testing and demonstrating the notebooks.
-
-## Usage
-
-Open a notebook in JupyterLab or VS Code, run its cells and select the input and output directories through the interactive interface.
+The `examples/vsm/` directory contains real hysteresis, backfield and converted DCD measurements of specimen TA04-05 for testing and demonstration. Other notebooks may reuse these measurements.
 
 ## Tests
 
-Run the DCD validation tests with:
-
-`python -m unittest discover -s tests -v`
+```bash
+python -m unittest discover -s tests -v
+```
 
 ## License
 
-Code and documentation are released under the MIT License (see `LICENSE`).
-
-Original example measurement data in `examples/vsm/` are available under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
-
-Third-party scientific references and material remain subject to their respective rights.
+Code and documentation are available under the [MIT License](LICENSE). Original example measurement data in `examples/vsm/` are shared under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); please attribute PaleoMagKit and identify specimen TA04-05 when reusing them. Third-party scientific material remains subject to its own rights.
