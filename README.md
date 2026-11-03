@@ -30,4 +30,4 @@ python -m unittest discover -s tests -v
 
 ## License
 
-Code and documentation: [MIT](LICENSE). Example measurements in `examples/vsm/`: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (cite PaleoMagKit and specimen TA04-05). Third-party material retains its original licensing.
+Code and documentation: [MIT](LICENSE). The project authors confirm that datasets in `examples/` are their own and authorize their inclusion in this repository. The TA04-05 hysteresis and backfield measurements (`examples/hys/TA04-05-500ms_500mT_hys` and `examples/DCD/raw_dcd/TA04-05-5s_500mT_back`) are shared under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (cite PaleoMagKit and specimen TA04-05). No additional reuse license is specified for other example datasets.

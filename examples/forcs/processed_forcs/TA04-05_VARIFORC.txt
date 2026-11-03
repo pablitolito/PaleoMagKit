@@ -1,0 +1,6 @@
+Optimal VARIFORC Smoothing Factors
+Optimal Sc0 = 2
+Optimal Sc1 = 2
+Optimal Su0 = 2
+Optimal Su1 = 2
+Optimal lambda = 0.00

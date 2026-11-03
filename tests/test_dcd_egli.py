@@ -17,7 +17,14 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = ROOT / "notebooks" / "02_DCD_Egli_Unmixing_Interactive_v01.ipynb"
-REAL_DCD = ROOT / "examples" / "vsm" / "TA04-05_DCD_for_unmixing.txt"
+REAL_DCD = (
+    ROOT
+    / "examples"
+    / "DCD"
+    / "processed_dcd"
+    / "DCD_clean_magnetization"
+    / "TA04-05-5s_500mT_back_unmix.back"
+)
 
 
 def load_engine():
